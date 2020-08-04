@@ -57,7 +57,6 @@ app.post('/movies', (req, res)=>{
             name: req.body.name,
             genre: req.body.genre
         }
-
         movies.push(movie);
         res.send(movie);
     }       
