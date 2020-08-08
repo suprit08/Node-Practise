@@ -1,0 +1,14 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "It is a simple weather information app.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Suprit Sonar",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
