@@ -5,7 +5,7 @@ var const_url = 'http://api.openweathermap.org/data/2.5/weather?q=Mumbai,in&mode
 var server = http.createServer((request, response)=>{
     var request = require('request');
     request(const_url, (err,res,body)=>{
-        if(!err){
+        if(!err){   
         var data = JSON.parse(body);
 
         response.write("<html><body><div>");
