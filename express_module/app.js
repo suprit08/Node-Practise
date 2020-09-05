@@ -5,7 +5,7 @@ const router = express.Router();
 
 const path = require('path');
 
-//static routing
+//routing for static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 //declare routes
