@@ -1,4 +1,8 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+
+//controllers
+const errorController = require('./controllers/error');
 
 const app = express();
 const router = express.Router();
@@ -7,6 +11,13 @@ const path = require('path');
 
 //routing for static files
 app.use(express.static(path.join(__dirname, 'public')));
+
+//middleware
+app.use(bodyParser.urlencoded({extended:false}));
+
+//template engine settings
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 //declare routes
 const adminRoutes = require('./routes/admin');
@@ -18,8 +29,6 @@ app.use(adminRoutes);
 app.use(shopRoutes);
 
 //other routes
-router.use((req, res, next)=>{
-    res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
-});
+app.use(errorController.get404);
 
 app.listen(3000);
