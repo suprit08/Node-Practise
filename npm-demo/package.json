@@ -9,6 +9,6 @@
   "author": "suprit",
   "license": "ISC",
   "dependencies": {
-    "underscore": "^1.10.2"
+    "underscore": "^1.12.1"
   }
 }
